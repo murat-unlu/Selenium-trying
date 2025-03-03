@@ -16,7 +16,7 @@ WebDriverWait(driver, 10).until(
 ).send_keys('')
 driver.find_element(By.XPATH, '//button[@type="submit"]').click()
 
-# "Bilgileri kaydet" butonunu bekleyin ve tıklayın
+
 try:
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Bilgileri kaydet")]'))
@@ -24,7 +24,6 @@ try:
 except Exception as e:
     print("İlk 'Bilgileri kaydet' butonu bulunamadı:", e)
 
-# "Şimdi Değil" butonunu bekleyin ve tıklayın
 try:
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Şimdi Değil")]'))
@@ -34,7 +33,6 @@ except Exception as e:
 sleep(2)
 driver.get("https://www.instagram.com/"anyinstaprofile"/")
 sleep(1)
-# Arama butonuna tıklama
 """try:
     # Arama butonunu bekleyin ve tıklayın
     search_button = WebDriverWait(driver, 10).until(
@@ -52,12 +50,9 @@ except Exception as e:
     except Exception as js_e:
         print("JavaScript ile tıklama başarısız:", js_e)"""
 
-# Tarayıcının kapanmasını engellemek için sonsuz döngü
 
 
-#aramakutusu =driver.find_element(By.XPATH, '//button[@type="text"]').send_keys('facebook')#
 
-# Tarayıcının kapanmasını engellemek için sonsuz döngü#
 def scrollAllWayDown():
     global driver
     footer = driver.find_element(By.TAG_NAME,'footer')
